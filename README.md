@@ -69,3 +69,87 @@ ROTA-INTELIGENTE/
 │   └── main.py
 │
 └── README.md
+
+## 6. Dados
+
+Os pontos de entrega utilizados no projeto estão armazenados no arquivo:
+
+`data/entregas.csv`
+
+O arquivo contém o nome de cada local e suas respectivas coordenadas X e Y.
+
+## 7. Resultados
+
+Após a execução do sistema, foi possível encontrar uma rota para realizar as entregas da Sabor Express.
+
+### Rota encontrada
+
+A rota calculada pelo sistema foi:
+
+**Restaurante → A → C → D → B → E → F → G**
+
+A distância total percorrida foi de **15,00 km**, considerando os pesos definidos para as conexões do grafo.
+
+O sistema visitou **8 locais**, considerando o restaurante como ponto inicial e os sete pontos de entrega.
+
+### Resultado do K-Means
+
+O algoritmo K-Means foi utilizado para agrupar os pontos de entrega em duas zonas, considerando a proximidade entre suas coordenadas.
+
+O agrupamento permite visualizar como os pedidos podem ser organizados em regiões próximas, facilitando o planejamento das entregas.
+
+### Mapa do Grafo
+
+![Mapa do Grafo](docs/mapa_grafo.png)
+
+### Agrupamento com K-Means
+
+![Agrupamento K-Means](docs/agrupamento_kmeans.png)
+
+## 8. Eficiência da Solução
+
+O algoritmo A* utiliza uma função heurística para orientar a busca em direção ao destino, tornando a busca mais eficiente.
+
+O K-Means permite organizar os pontos de entrega em grupos de acordo com a proximidade entre eles.
+
+A combinação dessas técnicas permite criar uma solução computacional para auxiliar na organização e otimização das entregas.
+
+## 9. Limitações
+
+A solução desenvolvida possui algumas limitações:
+
+- O mapa utilizado é uma representação simplificada;
+- As distâncias são simuladas;
+- Não são considerados dados de trânsito em tempo real;
+- A estratégia utilizada para múltiplas entregas é uma heurística e não garante necessariamente a melhor rota global;
+- O número de zonas do K-Means é definido previamente.
+
+## 10. Sugestões de Melhorias
+
+Como melhorias futuras, o sistema poderia:
+
+- Utilizar mapas reais;
+- Considerar trânsito em tempo real;
+- Considerar horários de entrega;
+- Utilizar dados reais de distância e tempo;
+- Utilizar técnicas mais avançadas de otimização de rotas;
+- Permitir diferentes quantidades de entregadores e zonas.
+
+## 11. Tecnologias Utilizadas
+
+- Python
+- VS Code
+- Algoritmo A*
+- K-Means
+- Matplotlib
+- CSV
+- GitHub
+
+## 12. Como Executar
+
+É necessário possuir Python instalado.
+
+Instale a biblioteca utilizada para geração dos gráficos:
+
+```bash
+python -m pip install matplotlib
